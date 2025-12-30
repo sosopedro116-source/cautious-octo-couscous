@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>TechCelulares | Tecnologia Atual</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --azul: #0d6efd;
+  --escuro: #0b132b;
+  --claro: #f8f9fa;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--claro);
+  color: #222;
+}
+
+header {
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+nav {
+  background: var(--escuro);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #0d6efd;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+h2 {
+  color: var(--azul);
+  margin-bottom: 15px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.stat {
+  background: linear-gradient(135deg, #eef3ff, #ffffff);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background: #eef3ff;
+  text-align: left;
+}
+
+select, button {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+button {
+  background: var(--azul);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #084298;
+}
+
+#resultado {
+  margin-top: 15px;
+  padding: 15px;
+  background: #eef3ff;
+  border-radius: 8px;
+}
+
+footer {
+  background: var(--escuro);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2em;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1> TechCelulares</h1>
+  <p>O melhor site sobre tecnologia e smartphones da atualidade</p>
+</header>
+
+<nav>
+  <a href="#estatisticas">Estatísticas</a>
+  <a href="#ficha">Ficha Técnica</a>
+  <a href="#comparacao">Comparações</a>
+  <a href="#conselhos">Conselhos</a>
+</nav>
+
+<div class="container">
+
+  <section id="estatisticas" class="card">
+    <h2> Estatísticas do Mercado (2025)</h2>
+    <div class="stats">
+      <div class="stat"> +1,2 bilhões de smartphones vendidos</div>
+      <div class="stat"> 76% dos modelos já são 5G</div>
+      <div class="stat"> IA presente em 60% dos celulares</div>
+      <div class="stat"> Mercado premium em crescimento</div>
+    </div>
+  </section>
+
+  <section id="ficha" class="card">
+    <h2> Ficha Técnica – Galaxy S25 Ultra</h2>
+    <table>
+      <tr><th>Processador</th><td>Snapdragon 8 Gen 4</td></tr>
+      <tr><th>RAM</th><td>12 GB / 16 GB</td></tr>
+      <tr><th>Armazenamento</th><td>256 GB / 512 GB / 1 TB</td></tr>
+      <tr><th>Câmera</th><td>200 MP com IA</td></tr>
+      <tr><th>Bateria</th><td>5000 mAh</td></tr>
+      <tr><th>Rede</th><td>5G, Wi-Fi 7, Bluetooth</td></tr>
+    </table>
+  </section>
+
+  <section id="comparacao" class="card">
+    <h2> Comparação de Smartphones</h2>
+
+    <select id="modelo1">
+      <option value="samsung">Galaxy S25 Ultra</option>
+      <option value="iphone">iPhone 16 Pro</option>
+      <option value="xiaomi">Xiaomi 14 Pro</option>
+    </select>
+
+    <select id="modelo2">
+      <option value="iphone">iPhone 16 Pro</option>
+      <option value="samsung">Galaxy S25 Ultra</option>
+      <option value="xiaomi">Xiaomi 14 Pro</option>
+    </select>
+
+    <br>
+    <button onclick="comparar()">Comparar</button>
+
+    <div id="resultado"></div>
+  </section>
+
+  <section id="conselhos" class="card">
+    <h2> Conselhos para Comprar</h2>
+    <ul>
+      <li>Prefira bateria e atualizações longas</li>
+      <li>Não escolha apenas pelos megapixels</li>
+      <li>Intermediários já são muito potentes</li>
+      <li>Verifique 5G e eSIM</li>
+      <li>Considere custo total do aparelho</li>
+    </ul>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2025 TechCelulares | Tecnologia e Informação</p>
+</footer>
+
+<script>
+function comparar() {
+  const dados = {
+    samsung: "Galaxy S25 Ultra: melhor câmera, tela premium e máximo desempenho.",
+    iphone: "iPhone 16 Pro: sistema otimizado, estabilidade e atualizações longas.",
+    xiaomi: "Xiaomi 14 Pro: excelente desempenho com melhor custo-benefício."
+  };
+
+  let m1 = modelo1.value;
+  let m2 = modelo2.value;
+
+  resultado.innerHTML =
+    "<strong>" + dados[m1] + "</strong><br><br>" +
+    "<strong>" + dados[m2] + "</strong>";
+}
+</script>
+
+</body>
+</html>
